@@ -1,4 +1,4 @@
-import WordRotate from "../../@/components/magicui/Word-rotate";
+import WordRotate from '../../@/components/magicui/word-rotate';
 import CEO_IMG from "../assets/ceo.jpeg"
 
 const Introduction = () => {
