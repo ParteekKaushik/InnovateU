@@ -75,7 +75,7 @@ export function VelocityScroll({
     const x = useTransform(baseX, (v) => `${wrap(-100 / repetitions, 0, v)}%`);
 
     const directionFactor = React.useRef<number>(1);
-    useAnimationFrame((t, delta) => {
+    useAnimationFrame((_, delta) => {
       let moveBy = directionFactor.current * baseVelocity * (delta / 1000);
 
       if (velocityFactor.get() < 0) {
@@ -95,9 +95,16 @@ export function VelocityScroll({
         ref={containerRef}
       >
         {/* Updated class from "inline-block" to "inline-flex" */}
-        <motion.div className={cn("inline-flex no-line-break", className)} style={{ x }}>
+        <motion.div
+          className={cn("inline-flex no-line-break", className)}
+          style={{ x }}
+        >
           {Array.from({ length: repetitions }).map((_, i) => (
-            <span key={i} ref={i === 0 ? textRef : null} className="no-line-break">
+            <span
+              key={i}
+              ref={i === 0 ? textRef : null}
+              className="no-line-break"
+            >
               {children}{" "}
             </span>
           ))}
@@ -111,17 +118,13 @@ export function VelocityScroll({
       <ParallaxText baseVelocity={default_velocity} className={className}>
         {text}
       </ParallaxText>
-      <h1
-          className="mt-6 md:mt-8 font-medium text-4xl md:text-5xl text-center"
-        >
-          Interested in{" "}
-          <span
-            className="text-strong font-semibold text-indigo-600"
-          >
-            Collaboration
-          </span>
-          ?
-        </h1>
+      <h1 className="mt-6 md:mt-8 font-medium text-4xl md:text-5xl text-center">
+        Interested in{" "}
+        <span className="text-strong font-semibold text-indigo-600">
+          Collaboration
+        </span>
+        ?
+      </h1>
       <ParallaxText baseVelocity={-default_velocity} className={className}>
         {text}
       </ParallaxText>
