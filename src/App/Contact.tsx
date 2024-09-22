@@ -99,7 +99,7 @@ const Contact: React.FC = () => {
               Feel Free To Contact Us Anytime
             </h2>
             <p className="text-2xl">Don't like filling up forms? Email us directly at -</p>
-            <span className="text-indigo-600 text-3xl mt-8">innovateU@gmail.com</span>
+            <span className="text-indigo-600 text-3xl mt-8">innovateu2@gmail.com</span>
           </div>
 
           <div className="lg:w-2/6 mt-10 lg:mt-0 px-8 py-14 md:p-20 rounded-3xl relative bg-gray-900">

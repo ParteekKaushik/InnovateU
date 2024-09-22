@@ -24,7 +24,7 @@ const Header = () => {
   }, [theme]);
 
   // Handle menu item click
-  const handleMenuClick = (href) => {
+  const handleMenuClick = (href: string) => {
     setMobileMenuOpen(false); // Close the menu
     const section = document.querySelector(href); // Scroll to the section
     if (section) {
