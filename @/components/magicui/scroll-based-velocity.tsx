@@ -118,10 +118,10 @@ export function VelocityScroll({
       <ParallaxText baseVelocity={default_velocity} className={className}>
         {text}
       </ParallaxText>
-      <h1 className="mt-6 md:mt-8 font-medium text-4xl md:text-5xl text-center">
+      <h1 className="mt-2 md:mt-8 font-medium text-4xl md:text-5xl text-center">
         Interested in{" "}
         <span className="text-strong font-semibold text-indigo-600">
-          Collaboration
+          LearningTech
         </span>
         ?
       </h1>

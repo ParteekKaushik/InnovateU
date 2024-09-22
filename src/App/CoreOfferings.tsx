@@ -30,13 +30,20 @@ const CoreOfferings = () => {
         "https://10web-site.ai/126/wp-content/uploads/sites/138/2024/09/tenweb_media_SgdW8URT.webp",
     },
   ];
+
+  // Function to handle scroll to #contact
+  const handleScrollToContact = () => {
+    const contactSection = document.querySelector("#contact");
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div id="courses" className="py-16">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center pb-8 justify-evenly px-4 md:px-0">
-          <h2
-            className="text-3xl md:text-6xl font-bold text-center mb-8 md:mb-16 p-2 md:p-4"
-          >
+          <h2 className="text-3xl md:text-6xl font-bold text-center mb-8 md:mb-16 p-2 md:p-4">
             {/* Text shown on larger screens */}
             <span className="hidden md:block text-5xl text-indigo-600 font-bold">
               Our Core Offerings
@@ -73,7 +80,10 @@ const CoreOfferings = () => {
                 </p>
               </div>
               <div className="px-6 pt-4 pb-6">
-                <button className="text-blue-500 hover:underline">
+                <button
+                  className="text-blue-500 hover:underline"
+                  onClick={handleScrollToContact} // Add onClick event to scroll to #contact
+                >
                   Join & Learn More
                 </button>
               </div>
